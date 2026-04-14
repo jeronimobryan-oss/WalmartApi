@@ -21,7 +21,6 @@ public class ProductController {
         Product foundProduct = productService.getProductById(id);
         return ResponseEntity.ok(foundProduct);
     }
-
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         Product savedProduct = productService.saveProduct(product);

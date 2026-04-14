@@ -27,7 +27,7 @@ public class ProductController {
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}") // Nuevo endpoint para actualizar
+    @PutMapping("/{id}") // Nuevo endpoint para actualizar...
     public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product product) {
         Product updatedProduct = productService.updateProduct(id, product);
         return ResponseEntity.ok(updatedProduct);

@@ -31,7 +31,7 @@ public class ProductService {
         return productMapper.mapToDto(product.get());
     }
 
-    public Product updateProduct(Long id, Product product) {
+    public Product updateProduct(Long id, Product product) { //Actualizar producto
         //Validamos si existe en la BD
         if (!productRepository.existsById(id)) {
             throw new NotFound("Product not found");
@@ -47,7 +47,7 @@ public class ProductService {
         return productMapper.mapToDto(savedEntity);
     }
 
-    public void deleteProduct(Long id) {
+    public void deleteProduct(Long id) { //El delete
         if (!productRepository.existsById(id)) {
             throw new NotFound("Product not found"+id);
         }

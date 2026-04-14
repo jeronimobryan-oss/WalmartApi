@@ -3,9 +3,9 @@ package com.walmartapi.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
 @Data
-@Table(name="products")
+@Entity
+@Table(name = "productos")
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
